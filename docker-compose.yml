@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  db:
+    image: "mongo"
+    container_name: dbmongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: jonathan
+      MONGO_INITDB_ROOT_PASSWORD: adminpass
+    volumes:
+      - ./data-volume:/data/db
+    ports:
+      - 27017:27017
